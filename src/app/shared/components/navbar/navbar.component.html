@@ -1,4 +1,4 @@
-<header>
+<header *ngIf="!isUser">
     <div class="logo">
         <a (click)="goToHome()" routerLink="/home" routerLinkActive="active">To Do List</a>
     </div>
@@ -6,5 +6,16 @@
         <a (click)="goToHome()" routerLink="/home" routerLinkActive="active">Home</a>
         <a (click)="goToLogin()" routerLink="auth/login" routerLinkActive="active">Login</a>
         <a (click)="goToRegister()" routerLink="auth/register" routerLinkActive="active">Register</a>
+    </nav>
+</header>
+
+<header *ngIf="isUser">
+    <div class="logo">
+        <a (click)="goToMain()" routerLink="/main" routerLinkActive="active">To Do List</a>
+    </div>
+    <nav class="nav-links">
+        <a (click)="goToMain()" routerLink="/main" routerLinkActive="active">Home</a>
+        <a href="/main">Otros servicios</a>
+        <a (click)="logOut()">Log out</a>
     </nav>
 </header>

@@ -1,19 +1,19 @@
 <shared-navbar></shared-navbar>
-
-<form id="formulario">
+<!--IMPORTANTE: importar el modolu FormsModule, en authModule o donde se va autilizar el ngModel-->
+<form id="formulario" (ngSubmit)="onSubmit()">
     <h3>Iniciá sesión</h3>
     <div class="form-group">
         <div class="log-in">
             <label for="username">Tu usuario</label>
-            <input type="text" id="username" name="username" placeholder="Ingresá tu nombre de usuario"
+            <input type="text" [(ngModel)]="username"  name="inputUsername" placeholder="Ingresá tu nombre de usuario"
                 required>
         </div>
         <div class="log-in">
             <label for="password">Tu clave</label>
-            <input type="password" id="password" name="password" placeholder="Ingresá tu clave" required>
+            <input type="password" [(ngModel)]="password" name="inputPassword" placeholder="Ingresá tu clave" required>
         </div>
         <div>
-            <button class="btn" id="enter-btn">Ingresar</button>
+            <button type="submit" class="btn" >Ingresar</button>
             <div>
                 <br>
                 <span>¿No tenes cuenta?</span>

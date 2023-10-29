@@ -1,0 +1,11 @@
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(71, 114, 177);
+}
+
+.nav-links{
+    display: flex;
+    gap:1rem;
+}

@@ -1,0 +1,28 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "description": "mi primer tarea",
+            "priority": 1,
+            "done": true
+        },
+        {
+            "id": 2,
+            "description": "tarea de prueba",
+            "priority": 5,
+            "done": false
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "email": "flor@gmail.com",
+            "password":"123"
+        },
+        {
+            "id": 2,
+            "email": "adm@gmail.com",
+            "password":"adm"
+        }
+    ]
+}

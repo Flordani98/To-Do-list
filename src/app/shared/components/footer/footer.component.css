@@ -1,0 +1,8 @@
+footer{
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgb(71, 114, 177);
+}

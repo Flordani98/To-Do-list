@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+    /*ESTANDAR, utilizar en todos los proyectos*/
+}
+
+/*A todos los elementos o pseudoelementos antes o despues le apliquen o le hereden esa propiedad del border-box*/
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    /* background-image: url(../imagenes/planetas.png); */
+    color: rgb(255, 255, 255);
+    background-image: url("./assets/images/fondo.png");
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    
+}

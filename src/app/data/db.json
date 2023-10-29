@@ -16,11 +16,13 @@
     "users": [
         {
             "id": 1,
+            "username": "flor",
             "email": "flor@gmail.com",
             "password":"123"
         },
         {
             "id": 2,
+            "username": "adm",
             "email": "adm@gmail.com",
             "password":"adm"
         }

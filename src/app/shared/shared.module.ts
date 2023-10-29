@@ -19,6 +19,8 @@ import { Error404Component } from './components/error404/error404.component';
     exports: [
         HomePageComponent,
         Error404Component,
+        NavbarComponent,
+        FooterComponent
 
     ]
 

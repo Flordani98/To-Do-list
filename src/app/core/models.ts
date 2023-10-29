@@ -2,11 +2,13 @@ import { ITask, IUser } from "./interfaces";
 
 export class User implements IUser{
     public id: number | null;
+    username: string | null;
     email: string | null;
     password: string | null;
 
     constructor( user? : any){
         this.id = user.id != null ? user.id : null;
+        this.username = user.username != null ? user.id : null;
         this.email = user.email != null ? user.email : null;
         this.password = user.password != null ? user.password : null;
     }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shared-navbar',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+  constructor(private router: Router){
+
+  }
+
+  goToLogin(){
+    this.router.navigate(["auth/login"]);
+  }
+  goToRegister(){
+    this.router.navigate(["auth/register"]);
+  }
+  goToHome(){
+    this.router.navigate(["home"]);
+  }
+
+
 
 }

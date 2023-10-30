@@ -1,10 +1,12 @@
 <div class="wrapper">
     <shared-navbar [isUser]="true"></shared-navbar> <!--Le envio al Navbar que el inicio fue exitoso-->
     <h3>Inicio exitoso: pagina de inicio</h3>
-    <tasks-table [tasks] = "tasks" (deletedTask)="deleteTask($event)" (editTask)="saveTask($event)" ></tasks-table>
+    <!--antes-->
+    <!-- <tasks-table [tasks] = "tasks" (deletedTask)="deleteTask($event)" (editTask)="saveTask($event)" ></tasks-table>
     <tasks-modify-task [taskToModify]="taskToModify" (taskModifiesToSave)="updateTask($event)"></tasks-modify-task>
-    <tasks-add-task (addCharacter)="addTask($event)" ></tasks-add-task>
+    <tasks-add-task (addCharacter)="addTask($event)" ></tasks-add-task> -->
 
+    <tasks-table [tasks] = "tasks" (deletedTask)="deleteTask($event)" (editTask)="saveTask($event)" ></tasks-table>
 </div>
 
 

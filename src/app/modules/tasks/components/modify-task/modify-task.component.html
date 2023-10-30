@@ -14,12 +14,9 @@
             <label for="done">Estado</label>
             <input type="done" id="done" name="done" [value]="taskToModify.done" [(ngModel)]="taskToModify.done">
         </div>
-        <div>
-            <button class="btn" type="submit" id="save-changes">Guardar cambios</button>
-                <br>
-                <!-- <button (click)="closeDialog()" class="btn" id="cancel">Cancelar</button> -->
-            <!-- </div> -->
-        </div>
+        
+        <button class="btn" type="submit" id="save-changes">Guardar cambios</button>
+        <button (click)="closeDialog()" class="btn" id="cancel">Cancelar</button>
     </div>
 
 </form>

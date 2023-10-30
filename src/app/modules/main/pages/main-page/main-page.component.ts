@@ -1,5 +1,7 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Task } from 'src/app/core/models';
+import { ModifyTaskComponent } from 'src/app/modules/tasks/components/modify-task/modify-task.component';
 import { TaskService } from 'src/app/modules/tasks/services/task.service';
 
 @Component({
@@ -17,7 +19,7 @@ export class MainPageComponent {
     description: '',
     done: false
   }
-  constructor(private taskService: TaskService){}
+  constructor(private taskService: TaskService, private dialog: MatDialog){}
 
   ngOnInit(){ //*metodo del ciclo de vida de un componente,
     //* antes de q se renderice la vista primero cargo las tasks
@@ -41,16 +43,26 @@ export class MainPageComponent {
   }
 
 
-  public updateTask(task : Task){
-    this.taskService.updateTask(task);
-    this.searchTasks();
-  }
+  // public updateTask(task : Task){
+  //   this.taskService.updateTask(task);
+  //   this.searchTasks();
+  // }
 
-  public saveTask(task : Task){ //*guarda mi task en mi main-page y lo pasa al componente modifyTask mediante un input
-    this.taskToModify = task;
-    this.searchTasks();
-  }
+  // public saveTask(task : Task){ //*guarda mi task en mi main-page y lo pasa al componente modifyTask mediante un input
+  //   this.taskToModify = task;
+  //   this.searchTasks();
+  // }
  
+  public saveTask(task: Task) {
+
+    const dialogRef = this.dialog.open(ModifyTaskComponent, { data: task, height: '400px', width: '350px' });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('El cuadro de diálogo se cerró con resultado:', result);
+      this.searchTasks();
+      console.log("se actualizo?!??!?!");
+    });
+  }
 
 
 

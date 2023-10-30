@@ -4,6 +4,7 @@ import { TasksTableComponent } from './components/tasks-table/tasks-table.compon
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { FormsModule } from '@angular/forms';
 import { ModifyTaskComponent } from './components/modify-task/modify-task.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -15,7 +16,8 @@ import { ModifyTaskComponent } from './components/modify-task/modify-task.compon
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   exports:[
     TasksTableComponent,

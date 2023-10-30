@@ -14,15 +14,15 @@
     },
     {
       "id": 6,
-      "priority": 2,
-      "description": "holaaaa",
-      "done": "false"
+      "priority": "1",
+      "description": "anda el modificar??????",
+      "done": "true"
     },
     {
       "id": 7,
       "priority": 5,
-      "description": "hola estpy ,modificando a las 6am",
-      "done": "true"
+      "description": "anda el mat dialog!!",
+      "done": "false"
     }
   ],
   "users": [
@@ -30,7 +30,7 @@
       "id": 1,
       "username": "flor",
       "email": "flor@gmail.com",
-      "password": "123"
+      "password": "1234567"
     },
     {
       "id": 2,

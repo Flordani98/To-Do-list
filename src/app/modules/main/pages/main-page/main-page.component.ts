@@ -11,9 +11,12 @@ export class MainPageComponent {
 
 
   public tasks : Task[] = [];
-
-
-
+  public taskToModify: Task = {
+    id: 0,
+    priority: 0,
+    description: '',
+    done: false
+  }
   constructor(private taskService: TaskService){}
 
   ngOnInit(){ //*metodo del ciclo de vida de un componente,
@@ -34,6 +37,17 @@ export class MainPageComponent {
 
   public addTask(task : Task){
     this.taskService.addTask(task);
+    this.searchTasks();
+  }
+
+
+  public updateTask(task : Task){
+    this.taskService.updateTask(task);
+    this.searchTasks();
+  }
+
+  public saveTask(task : Task){ //*guarda mi task en mi main-page y lo pasa al componente modifyTask mediante un input
+    this.taskToModify = task;
     this.searchTasks();
   }
  

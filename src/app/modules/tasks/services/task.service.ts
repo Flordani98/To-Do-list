@@ -41,28 +41,23 @@ export class TaskService {
     }
 
 
-    // public async updateTask(task: Task){
-    //     this.apiService.updateTask(task).subscribe({
-    //         next: () => this.
-    //     })
+    public async updateTask(task: Task): Promise<Task | null> {
 
-    // public async updateTask(task: Task): Promise<Task | null> {
-
-    //     let resp: Task | null = null;
+        let resp: Task | null = null;
     
-    //     try{
+        try{
     
-    //       const apiResponse = this.apiService.updateTask(task);
-    //       resp = await lastValueFrom(apiResponse);
+          const apiResponse = this.apiService.updateTask(task);
+          resp = await lastValueFrom(apiResponse);
     
-    //     }catch(error){
+        }catch(error){
     
-    //       throw error;
-    //     }
+          throw error;
+        }
     
-    //     return resp;
+        return resp;
     
-    //   }
+      }
 
 
     

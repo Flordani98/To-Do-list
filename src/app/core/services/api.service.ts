@@ -36,18 +36,10 @@ export class ApiService {
         //*¨retorna la misma tarea ya creada(por la doc de json server)
     }
 
-    // public updateTask(task: Task): Observable<boolean>{
-    //     return this.http.put<boolean>(`${this.baseURL}/tasks/${task.id}`, task);
-    // }
-    // updateTask(task : Task): Observable<boolean> {
-    //     const url = `${this.baseURL}/tasks/${task.id}`;
-    //     return this.http.put<boolean>(url, task);
-    //   }
-
-    //   public updateTask(task: Task): Observable<Task> {
-    //     if (!task.id) throw Error("Task id is required");
+      public updateTask(task: Task): Observable<Task> {
+        if (!task.id) throw Error("Task id is required");
     
-    //     return this.http.put<Task>(`${this.baseURL}/tasks/${task.id}`, task);
-    //   }
+        return this.http.put<Task>(`${this.baseURL}/tasks/${task.id}`, task);
+      }
 
 }

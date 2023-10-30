@@ -13,16 +13,16 @@ export class TasksTableComponent {
   @Output()
   public deletedTask : EventEmitter<number> = new EventEmitter();
 
-  // @Output()
-  // public editTask : EventEmitter<Task> = new EventEmitter();
+  @Output()
+  public editTask : EventEmitter<Task> = new EventEmitter();
 
   public deleteTask( idTask : number): void{
     this.deletedTask.emit(idTask)
   }
 
-  // public updateTask( task : Task): void{
-  //   this.editTask.emit(task);
-  // }
+  public updateTask( task : Task): void{
+    this.editTask.emit(task);
+  }
 
 
 

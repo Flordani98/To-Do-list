@@ -1,0 +1,25 @@
+<form id="formulario" (ngSubmit)="onSubmit()">
+    <h4>Modificar tarea</h4>
+    <div class="form-group">
+        <div class="update-task">
+            <label for="priority">Prioridad</label>
+            <input type="text" id="priority" name="priority" [value]="taskToModify.priority" [(ngModel)]="taskToModify.priority" >
+            <!--en lugar de utilizar el ngModel para modifique al mismo tiempo q voy escribiendo, voy a recargar la pagina obteniendo las tasks nuevamente de la db.json-->
+        </div>
+        <div class="update-task">
+            <label for="description">Descripción</label>
+            <input type="description" id="description" name="description" [value]="taskToModify.description" [(ngModel)]="taskToModify.description" placeholder="Ingresá una descripción" >
+        </div>
+        <div class="update-task">
+            <label for="done">Estado</label>
+            <input type="done" id="done" name="done" [value]="taskToModify.done" [(ngModel)]="taskToModify.done">
+        </div>
+        <div>
+            <button class="btn" type="submit" id="save-changes">Guardar cambios</button>
+                <br>
+                <!-- <button (click)="closeDialog()" class="btn" id="cancel">Cancelar</button> -->
+            <!-- </div> -->
+        </div>
+    </div>
+
+</form>

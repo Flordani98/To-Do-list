@@ -1,0 +1,26 @@
+table{
+  background-color:rgb(71, 114, 177) ;
+  color:rgb(255, 255, 255);
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+
+
+th{
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 3px solid white;
+    padding: .6rem;
+    
+
+
+}
+
+td{
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding: .6rem;
+
+}

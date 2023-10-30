@@ -1,0 +1,36 @@
+<!-- <div class="button">
+    <button>Agregar Tarea</button>
+</div> -->
+
+<!--para utilizar el Mat dialog para un pop up, mi form tiene q estar encerrado en un div con la clase "mat-dialog-content"-->
+<!--un mat-dialog-accions para e botón de enviar form-->
+
+<form id="formulario" (ngSubmit)="onSubmit()">
+    <h3>Agregar Tarea</h3>
+    <div class="form-group">
+        <div class="add-task">
+            <label for="priority">Prioridad</label>
+            <input type="number" [(ngModel)]="task.priority"  name="priority" placeholder="Ingresá la prioridad de tu tarea"
+                required>
+        </div>
+        <div class="add-task">
+            <label for="description">Descripción</label>
+            <input type="description" [(ngModel)]="task.description" name="description" placeholder="Ingresá una description" required>
+        </div>
+        <div class="add-task">
+            <label for="done">Estado</label>
+            <input type="done" [(ngModel)]="task.done" name="done" required>
+        </div>
+
+
+        <div>
+            <button type="submit" class="btn" >Crear tarea</button>
+            <!-- <div>
+                <br>
+                <span>¿No tenes cuenta?</span>
+                <button class="btn" id="register-btn">Reset</button>
+            </div> -->
+        </div>
+    </div>
+
+</form>

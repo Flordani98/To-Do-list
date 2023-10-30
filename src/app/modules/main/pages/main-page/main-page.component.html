@@ -1,6 +1,11 @@
+<div class="wrapper">
+    <shared-navbar [isUser]="true"></shared-navbar> <!--Le envio al Navbar que el inicio fue exitoso-->
+    <h3>Inicio exitoso: pagina de inicio</h3>
+    <tasks-table [tasks] = "tasks" (deletedTask)="deleteTask($event)" ></tasks-table>
+    <tasks-add-task (addCharacter)="addTask($event)" ></tasks-add-task>
+    <!-- <tasks-edit-task></tasks-edit-task> -->
+
+</div>
 
 
-<shared-navbar [isUser]="true"></shared-navbar> <!--Le envio al Navbar que el inicio fue exitoso-->
-<p>main-page works!</p>
-<h3>Inicio exitoso: pagina de inicio</h3>
 <shared-footer></shared-footer>

@@ -32,3 +32,10 @@ button{
     justify-content: center;
     margin-top: 3rem;
 }
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 86.5vh;
+
+}

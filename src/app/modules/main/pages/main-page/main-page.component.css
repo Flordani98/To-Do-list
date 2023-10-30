@@ -1,9 +1,9 @@
-/* .wrapper{
+.wrapper{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 86.5vh;
 
-} */
+}
 
 /* .tasks-table{
     flex-grow: 1;

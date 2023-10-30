@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "id": 3,
-      "description": "hola estpy ,modificando a las 6am",
-      "priority": 5,
-      "done": "true"
-    },
-    {
       "id": 4,
       "priority": 2,
       "description": "modificando de nuevo porq no lo CREO ",
@@ -21,8 +15,14 @@
     {
       "id": 6,
       "priority": 2,
-      "description": "probandpas",
+      "description": "holaaaa",
       "done": "false"
+    },
+    {
+      "id": 7,
+      "priority": 5,
+      "description": "hola estpy ,modificando a las 6am",
+      "done": "true"
     }
   ],
   "users": [
@@ -37,6 +37,18 @@
       "username": "adm",
       "email": "adm@gmail.com",
       "password": "adm"
+    },
+    {
+      "id": 3,
+      "username": "newuser",
+      "email": "flordani98@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "username": "eze",
+      "email": "eze",
+      "password": "1234"
     }
   ]
 }

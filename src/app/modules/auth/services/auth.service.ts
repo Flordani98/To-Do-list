@@ -55,6 +55,14 @@ export class AuthService {
         this.clearUser();
     }
 
+    public addUser(user: User){
+        return new Promise<User>((resolve, reject) =>{
+            this.apiService.addUser(user).subscribe({
+                next: data => resolve(data),
+                error: error => reject(error)
+            })
+        });
+    }
     
     
 }

@@ -19,6 +19,12 @@ export class ApiService {
         //definimos la peticion http para obtener el usuario que se quiere autenticar
 
     }
+    public addUser(user : User): Observable<User>{
+        return this.http.post<User>(`${this.baseURL}/users`, user) //*el 2do parametro q le paso al post es el BODY
+        //*recibimos por parametro la tarea que vamos agregar a la BD de json, y 
+        //*¨retorna la misma tarea ya creada(por la doc de json server)
+    }
+
 
     //*Tasks
 

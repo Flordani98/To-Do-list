@@ -46,3 +46,10 @@ form h3{
 
 }
 
+.incorrect-input-message{
+    margin: .1rem 0 0 0;
+    font-size: .8rem;
+    font-weight: bold;
+    color: red;
+}
+

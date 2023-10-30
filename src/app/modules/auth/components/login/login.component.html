@@ -8,10 +8,22 @@
             <input type="text" [(ngModel)]="username"  name="inputUsername" placeholder="Ingresá tu nombre de usuario"
                 required>
         </div>
+
         <div class="log-in">
             <label for="password">Tu clave</label>
-            <input type="password" [(ngModel)]="password" name="inputPassword" placeholder="Ingresá tu clave" required>
+            <input (keyup)="validPassword()" type="password" [(ngModel)]="password" name="inputPassword" placeholder="Ingresá tu clave" required>
+        
+            <ng-container *ngIf="correctPassword; else isIncorrectPassword">
+            </ng-container>
+    
+            <ng-template #isIncorrectPassword>
+                <p class="incorrect-input-message">*La clave ingresada debe tener minimo 6 caracteres</p>
+            </ng-template>
+        
         </div>
+
+        
+
         <div>
             <button type="submit" class="btn" >Ingresar</button>
             <div>

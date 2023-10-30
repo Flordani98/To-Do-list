@@ -12,30 +12,42 @@ export class LoginComponent {
 
   public username: string = '';
   public password: string = '';
+
+  public correctPassword: boolean = true;
   
 
   constructor(private authService: AuthService, private router: Router){} //*inyecto el router para poder navegar a una ruta cuando el inicio sea exitoso
 
+  validPassword(){
+   this.correctPassword = this.password.length > 6; //*si la constraseña es mayor a 6 retorna true, sino false
+  }
+
+  public validForm(){
+
+  }
+
   async onSubmit(){
     //*validaciones de form
 
-    try{
-      let isLogin: boolean = await this.authService.login(this.username, this.password); 
-      //*me devuelve una promesa, con valor booleano, si se pudo iniciar de manera exitosa o no.
-      //*le paso los atributos del usuario para verificar
-
-      if(isLogin){ //*si se inicio sesión correctamente
-        this.router.navigate(["/main"]);  
-      }else{
-        console.log("No se logró iniciar sesión, por favor verifique los datos");
-        this.username = '';
-        this.password = '';
-
+    
+      try{
+        let isLogin: boolean = await this.authService.login(this.username, this.password); 
+        //*me devuelve una promesa, con valor booleano, si se pudo iniciar de manera exitosa o no.
+        //*le paso los atributos del usuario para verificar
+  
+        if(isLogin){ //*si se inicio sesión correctamente
+          this.router.navigate(["/main"]);  
+        }else{
+          alert("No se logró iniciar sesión, por favor verifique los datos");
+          this.username = '';
+          this.password = '';
+  
+        }
+  
+      }catch(error){
+        console.log(error);
       }
 
-    }catch(error){
-      console.log(error);
-    }
 
     console.log(this.username);
     console.log(this.password);

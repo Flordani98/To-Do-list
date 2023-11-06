@@ -5,6 +5,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { Error404Component } from './components/error404/error404.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -14,7 +16,9 @@ import { Error404Component } from './components/error404/error404.component';
         Error404Component
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MatExpansionModule,
+        BrowserAnimationsModule
     ],
     exports: [
         HomePageComponent,

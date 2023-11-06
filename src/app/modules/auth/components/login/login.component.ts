@@ -19,7 +19,7 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router){} //*inyecto el router para poder navegar a una ruta cuando el inicio sea exitoso
 
   validPassword(){
-   this.correctPassword = this.password.length > 6; //*si la constraseña es mayor a 6 retorna true, sino false
+   this.correctPassword = this.password.length >= 6; //*si la constraseña es mayor a 6 retorna true, sino false
   }
 
   public validForm(){
